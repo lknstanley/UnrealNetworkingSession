@@ -25,3 +25,4 @@ Player is able to:
 6. [[WIKI] [Finished] C++ Session Create/Find/Join/Destroy](https://forums.unrealengine.com/community/community-content-tools-and-tutorials/49645-wiki-finished-c-session-create-find-join-destroy)
 7. [Legacy/How To Use Sessions In C++ - ue4community](https://www.ue4community.wiki/Legacy/How_To_Use_Sessions_In_C%2B%2B)
 8. [How To Use Sessions In C++](https://unreal.gg-labs.com/wiki-archives/networking/how-to-use-sessions-in-c++)
+9. [Use RPC function with Unreal Engine](https://docs.unrealengine.com/en-US/Gameplay/Networking/Actors/RPCs/index.html)
