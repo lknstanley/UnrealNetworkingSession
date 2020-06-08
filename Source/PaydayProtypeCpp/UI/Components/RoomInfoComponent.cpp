@@ -16,13 +16,17 @@ void URoomInfoComponent::NativeConstruct()
 	}
 }
 
-void URoomInfoComponent::SetRoomInfo( int32 iNewRoomId, FString strNewOwnerName, int32 iPingInMs )
+void URoomInfoComponent::SetRoomInfo( int32 iNewRoomId, FString strNewOwnerName, int32 iPingInMs, int32 iNumOfMaxConnection, int32 iCurrentAvailableConnection )
 {
 	iRoomId = iNewRoomId;
 	strOwnerName = strNewOwnerName;
 
+	GEngine->AddOnScreenDebugMessage( -1, 3.0f, FColor::Blue, FString::Printf( TEXT( "Max Connection: %d" ), iNumOfMaxConnection ) );
+	GEngine->AddOnScreenDebugMessage( -1, 3.0f, FColor::Blue, FString::Printf( TEXT( "Ava Slot: %d" ), iCurrentAvailableConnection ) );
+	
 	RoomOwnerName->SetText( FText::FromString( strNewOwnerName ) );
-	RoomStatus->SetText( FText::FromString( FString::FromInt( iPingInMs ) ) );
+	RoomStatus->SetText( FText::FromString( FString::Printf( TEXT( "%dms" ),  iPingInMs ) ) );
+	RoomPlayerCount->SetText( FText::FromString( FString::Printf( TEXT( "%d/%d" ), iNumOfMaxConnection - iCurrentAvailableConnection, iNumOfMaxConnection ) ) );
 }
 
 void URoomInfoComponent::OnClicked()

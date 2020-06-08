@@ -36,11 +36,13 @@ public:
 	UTextBlock* RoomOwnerName;
 	UPROPERTY( meta = ( BindWidget ) )
 	UTextBlock* RoomStatus;
+	UPROPERTY( meta = (BindWidget) )
+	UTextBlock* RoomPlayerCount;
 
 	/*
 	 * Public Interfaces
 	 */
-	void SetRoomInfo( int32 iNewRoomId, FString strNewOwnerName, int32 iPingInMs );
+	void SetRoomInfo( int32 iNewRoomId, FString strNewOwnerName, int32 iPingInMs, int32 iNumOfMaxConnection, int32 iCurrentAvailableConnection );
 
 	/*
 	 * UI Callbacks

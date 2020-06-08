@@ -87,10 +87,10 @@ void URoomScreen::ResetServerList()
 	aRoomInfoComponents.Empty();
 }
 
-void URoomScreen::AddServerToList( int32 iRoomIndex, FString strServerName, int32 iPing )
+void URoomScreen::AddServerToList( int32 iRoomIndex, FString strServerName, int32 iPing, int32 iNumOfMaxConnection, int32 iCurrentAvailableConnection )
 {
 	URoomInfoComponent* roomInfoComponent = Cast<URoomInfoComponent>( CreateWidget( GetWorld(), RoomInfoComponentClass ) );
-	roomInfoComponent->SetRoomInfo( iRoomIndex, strServerName, iPing );
+	roomInfoComponent->SetRoomInfo( iRoomIndex, strServerName, iPing, iNumOfMaxConnection, iCurrentAvailableConnection );
 	SearchResultContainer->AddChild( roomInfoComponent );
 	aRoomInfoComponents.Add( roomInfoComponent );
 }
