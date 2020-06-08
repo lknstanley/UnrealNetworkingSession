@@ -120,7 +120,7 @@ void APaydayProtypeCppCharacter::SetupPlayerInputComponent(class UInputComponent
 	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
 
 	// Bind fire event
-	PlayerInputComponent->BindAction("Fire", IE_Pressed, this, &APaydayProtypeCppCharacter::OnFire);
+	PlayerInputComponent->BindAction("Fire", IE_Pressed, this, &APaydayProtypeCppCharacter::OnFireClicked );
 
 	// Enable touchscreen input
 	EnableTouchscreenMovement(PlayerInputComponent);
@@ -140,7 +140,12 @@ void APaydayProtypeCppCharacter::SetupPlayerInputComponent(class UInputComponent
 	PlayerInputComponent->BindAxis("LookUpRate", this, &APaydayProtypeCppCharacter::LookUpAtRate);
 }
 
-void APaydayProtypeCppCharacter::OnFire()
+void APaydayProtypeCppCharacter::OnFireClicked()
+{
+	OnFire();
+}
+
+void APaydayProtypeCppCharacter::OnFire_Implementation()
 {
 	// try and fire a projectile
 	if (ProjectileClass != NULL)

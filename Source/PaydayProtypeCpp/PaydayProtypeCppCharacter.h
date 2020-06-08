@@ -83,7 +83,14 @@ public:
 protected:
 	
 	/** Fires a projectile. */
+	void OnFireClicked();
+
+	/* Online Stuff */
+	// Declare the multicast function
+	UFUNCTION( NetMulticast, Reliable )
 	void OnFire();
+	// Implement the multicast function callback
+	void OnFire_Implementation();
 
 	/** Resets HMD orientation and position in VR. */
 	void OnResetVR();
