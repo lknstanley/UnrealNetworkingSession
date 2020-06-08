@@ -16,6 +16,17 @@ Player is able to:
 2. [Join Session with Replication](https://youtu.be/PuTgP1X8BDg)
 3. [RPC Function Demo - Firing](https://youtu.be/G_VfS_E60vU)
 
+# How to test Online Stuff
+
+Because of PIE cannot connect LAN session within the editor, so that every time I need a packaged version to test the online multiplay stuff.
+Before you start to debug and run the game, please do the following steps:
+
+1. Modify the `RunGame.bat` change the `UE4Editor.exe` and `.uproject` to the correct path
+2. Run twice
+3. Use one of them to create session, and the other one search session and click the server to join the session
+
+PS: If you can't find any session in the list, please check your network settings.
+
 # References
 
 1. [UE4-Multiplayer-Example](https://github.com/minimpoun/UE4-Multiplayer-Example)
