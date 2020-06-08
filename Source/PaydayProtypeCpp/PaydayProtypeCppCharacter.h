@@ -87,7 +87,7 @@ protected:
 
 	/* Online Stuff */
 	// Declare the multicast function
-	UFUNCTION( NetMulticast, Reliable )
+	UFUNCTION( Server, Reliable )
 	void OnFire();
 	// Implement the multicast function callback
 	void OnFire_Implementation();
