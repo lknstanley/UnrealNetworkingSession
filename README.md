@@ -14,6 +14,7 @@ Player is able to:
 
 1. [Create and Search Session](https://youtu.be/oxaVHqnWLnQ)
 2. [Join Session with Replication](https://youtu.be/PuTgP1X8BDg)
+3. [RPC Function Demo - Firing](https://youtu.be/G_VfS_E60vU)
 
 # References
 
