@@ -21,7 +21,13 @@ void ADemoRoomHUD::SetServerList( TArray<FOnlineSessionSearchResult> aNewServerL
 
 	for( int32 i = 0; i < aNewServerList.Num(); i++ )
 	{
-		DemoScreen->AddServerToList( i, aNewServerList[ i ].Session.OwningUserName, aNewServerList[ i ].PingInMs );
+		DemoScreen->AddServerToList( 
+			i, // The index of this server in the list
+			aNewServerList[ i ].Session.OwningUserName,  // Server Name
+			aNewServerList[ i ].PingInMs, // Server Ping
+			aNewServerList[ i ].Session.SessionSettings.NumPublicConnections, // Max Connection
+			aNewServerList[i].Session.NumOpenPublicConnections // Current connected public connection count
+		);
 	}
 	
 }

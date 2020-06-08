@@ -55,5 +55,5 @@ public:
 	 * Interfaces
 	 */
 	void ResetServerList();
-	void AddServerToList( int32 iRoomIndex, FString strServerName, int32 iPing );
+	void AddServerToList( int32 iRoomIndex, FString strServerName, int32 iPing, int32 iNumOfMaxConnection, int32 iCurrentAvailableConnection );
 };
